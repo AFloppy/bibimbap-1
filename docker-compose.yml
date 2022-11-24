@@ -17,6 +17,9 @@ services:
       - "8001:8001"
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    volumes:
+      - /usr/src/static/server_logs:/usr/src/app/logs
+      - /usr/src/static/thumbnail:/usr/src/app/thumbnail
     restart: always
   noldaga-client:
     platform: linux/amd64
@@ -28,4 +31,5 @@ services:
       - "host.docker.internal:host-gateway"
     volumes:
       - /usr/src/cert:/usr/src/app/cert
+      - /usr/src/static/object_files:/usr/src/app/static/object_files
     restart: always

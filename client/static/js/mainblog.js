@@ -306,7 +306,6 @@ function assignObjectFloor( url ) {
     let lookCamera = new THREE.Vector3();
     camera.getWorldDirection(lookCamera);
     assignSetFloor( lookCamera ); // 배치하기 전 설정해야 하는 내용
-    
 
     // 사용자가 보고 있는 방향을 기준으로 오브젝트가 생성되도록
     prePosition[0] = camera.position.x + lookCamera.x * 4;
@@ -782,7 +781,6 @@ function setupCamera() {
         if(moveObjectKey) {
             return;
         }
-
 
         // pointer lock
         controls.lock();
